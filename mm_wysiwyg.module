@@ -1,0 +1,33 @@
+<?php
+
+include_once('mm_wysiwyg.features.inc');
+
+function mm_wysiwyg_wysiwyg_editor_settings_alter(&$settings, $context) {
+  if ($context['editor']['name'] != 'ckeditor') {
+    return;
+  }
+
+  $settings['toolbar'] = array(
+    array('Source', '-', 'Maximize', 'ShowBlocks', '-', 'Save', 'NewPage', 'Preview', '-', 'Templates'),
+    array('Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Print', 'SpellChecker', 'Scayt'),
+    array('Undo', 'Redo', '-', 'Find', 'Replace', '-', 'SelectAll', 'RemoveFormat'),
+    // array('Form', 'Checkbox', 'Radio', 'TextField', 'Textarea', 'Select', 'Button', 'ImageButton', 'HiddenField'),
+    '/',
+    array('Bold', 'Italic', 'Underline', 'Strike', '-', 'Subscript', 'Superscript'),
+    array('NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', 'Blockquote', 'CreateDiv'),
+    array('JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'),
+    array('Link', 'Unlink', 'Anchor'),
+    array('Image', 'Flash', 'Table', 'HorizontalRule', 'Smiley', 'SpecialChar', 'PageBreak'),
+    '/',
+    array('Styles', 'Format', 'Font', 'FontSize'),
+    array('TextColor', 'BGColor'),
+    array('About'),
+  );
+
+  //dpm($settings['toolbar']);
+
+  // Set language
+  global $language;
+  $settings['language'] = $language->language;
+}
+
