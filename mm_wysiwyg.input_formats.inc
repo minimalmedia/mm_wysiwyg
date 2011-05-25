@@ -15,11 +15,8 @@ function mm_wysiwyg_input_formats() {
   );
   $input_format->filters = array(
     'filter' => array(
-      // Delta => Weight for: URL filter
       '2' => '0',
-      // Delta => Weight for: Line break converter
       '1' => '1',
-      // Delta => Weight for: HTML corrector
       '3' => '10',
     ),
   );

@@ -14,4 +14,7 @@ function mm_wysiwyg_ctools_plugin_api() {
   elseif ($module == "wysiwyg" && $api == "") {
     return array("version" => 2);
   }
+  elseif ($module == "wysiwyg" && $api == "wysiwyg") {
+    return array("version" => 2);
+  }
 }

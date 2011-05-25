@@ -80,35 +80,6 @@ function mm_wysiwyg_strongarm() {
         ),
       ),
     ),
-    3 => array(
-      'name' => 'Administrator',
-      'usertab' => 1,
-      'filesize' => '1',
-      'quota' => '2',
-      'tuquota' => '0',
-      'extensions' => 'gif png jpg jpeg',
-      'dimensions' => '800x600',
-      'filenum' => '1',
-      'directories' => array(
-        0 => array(
-          'name' => 'u%uid',
-          'subnav' => 0,
-          'browse' => 1,
-          'upload' => 1,
-          'thumb' => 1,
-          'delete' => 0,
-          'resize' => 0,
-        ),
-      ),
-      'thumbnails' => array(
-        0 => array(
-          'name' => 'Thumb',
-          'dimensions' => '90x90',
-          'prefix' => 'thumb_',
-          'suffix' => '',
-        ),
-      ),
-    ),
   );
 
   $export['imce_profiles'] = $strongarm;
@@ -116,17 +87,7 @@ function mm_wysiwyg_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'imce_roles_profiles';
-  $strongarm->value = array(
-    3 => array(
-      'pid' => '3',
-    ),
-    2 => array(
-      'pid' => '0',
-    ),
-    1 => array(
-      'pid' => '0',
-    ),
-  );
+  $strongarm->value = array();
 
   $export['imce_roles_profiles'] = $strongarm;
   $strongarm = new stdClass;
